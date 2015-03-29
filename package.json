@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AmirCirt/comverse",
   "devDependencies": {
-    "grunt": "^0.4.5"
+    "grunt": "^0.4.5",
+    "grunt-md2html": "^0.2.1"
   }
 }
