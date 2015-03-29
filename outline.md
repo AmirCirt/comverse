@@ -49,14 +49,14 @@ LEARN MORE
 > Comverse has been able to fully deliver what we want and we have peers...
 > -Ravishanker, Tata Sky CIO N.
 
-* *All 256 Succes Storis*
+* *All 256 Success Stories*
 
 #### KEY SOLUTIONS
   * Monetizing Data
   * Over the Top (OTT)
   * Machine to Machine (M2M)
   * Cloud Computing
-  * Managef Services
+  * Manage Services
   * Customer Experience Management
   * Rich Communication Suite (RCS)
   * Social Media
