@@ -15,9 +15,8 @@
   "bugs": {
     "url": "https://github.com/AmirCirt/comverse/issues"
   },
-  "homepage": "https://github.com/AmirCirt/comverse"
-  "devDependencies":
-  {
-        "grunt": "^0.4.5"
-  },
+  "homepage": "https://github.com/AmirCirt/comverse",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
 }
