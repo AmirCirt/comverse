@@ -16,7 +16,7 @@ module.exports = function (grunt) {
 		connect: {
 			all: {
 				options: {
-					port: 80,
+					port: 9000,
 					base: '',
 					livereload: true,
 					keepalive: false,
@@ -31,7 +31,7 @@ module.exports = function (grunt) {
 			}
 		},
 
-		watch: {
+		regarde: {
 			js: {
 				files: ['js/**/*.js'],
 				tasks: ['livereload']
@@ -47,8 +47,10 @@ module.exports = function (grunt) {
 		}
 	});
 	
-	grunt.registerTask('default', ['connect', 'watch']);
+	grunt.loadNpmTasks('grunt-contrib-livereload');
 	grunt.loadNpmTasks('grunt-md2html');
 	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-regarde');
+	
+	grunt.registerTask('default', ['livereload-start', 'connect', 'regarde']);
 };
