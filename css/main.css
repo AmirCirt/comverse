@@ -25,7 +25,7 @@ a{
 	clear: both;
 }
 
-.showOnMobile, #menuHamurger, #menuSearch, #searchInput, .slideButton > span{
+.item-arrow, .showOnMobile, #menuHamurger, #mobileFooter, #menuSearch, #searchInput, .slideButton > span{
 	display: none;
 }
 
@@ -77,6 +77,15 @@ ol ul a {
 		border-bottom: none;
 		box-shadow: -3px 1px 10px -3px gray;
 
+	}
+	body > section:nth-child(2) ul > li:nth-child(1):hover{
+		background-color: rgba(255, 51, 153, 1); /* pink */
+	}
+	body > section:nth-child(2) ul > li:nth-child(2):hover{
+		background-color: rgba(90, 190, 40, 1); /* green */
+	}
+	body > section:nth-child(2) ul > li:nth-child(3):hover{
+		background-color: rgba(255, 102, 0, 1); /* orange */
 	}
 }
 
@@ -173,9 +182,7 @@ body > section:nth-child(2) ul > li:nth-child(1){
 	background-color: rgba(255, 51, 153, 0.75); /* pink */
 }
 
-body > section:nth-child(2) ul > li:nth-child(1):hover{
-	background-color: rgba(255, 51, 153, 1); /* pink */
-}
+
 
 
 body > section:nth-child(2) ul > li:nth-child(2){
@@ -183,17 +190,13 @@ body > section:nth-child(2) ul > li:nth-child(2){
 	background-color: rgba(90, 190, 40, 0.75); /* green */
 }
 
-body > section:nth-child(2) ul > li:nth-child(2):hover{
-	background-color: rgba(90, 190, 40, 1); /* green */
-}
+
 
 body > section:nth-child(2) ul > li:nth-child(3){
 	background-color: rgba(255, 102, 0, 0.75); /* orange */
 }
 
-body > section:nth-child(2) ul > li:nth-child(3):hover{
-	background-color: rgba(255, 102, 0, 1); /* orange */
-}
+
 
 body > section:nth-child(3){
 	text-align: center;
@@ -450,6 +453,11 @@ body > section:nth-child(5){
 		background:         linear-gradient(#74B3CB, #4790AC);
 	}
 
+	.blueButton img{
+		position: relative;
+		right: -3em;
+	}
+
 	body > footer{
 		text-align: center;
 		color: white;
@@ -461,17 +469,16 @@ body > section:nth-child(5){
 	}
 
 	body > footer .footerPage{
+		max-width: 30%;
 		text-align: left;
 		padding: 0 0 0 0;
 		margin: 0;
-		width: 23%;
 		display: inline-block;
 		vertical-align: top ;
 	}
 
 	body > footer .footerPage:nth-child(5){
 		background-color: gray;
-		margin-top: 0;
 	}
 
 
@@ -519,10 +526,10 @@ body > section:nth-child(5){
 		border-radius: 2px;
 	}
 	.slideButton:hover{
-		background-color: gray;
+		background-color: #74B3CB;
 	}
 	.slideButton:focus{
-		background-color: #74B3CB;
+		background-color: #59bedb;
 		cursor: pointer;
 	}
 
@@ -610,6 +617,8 @@ body > section:nth-child(5){
 		}
 
 		#freeComverse{
+			margin-top: 0;
+			padding: 1em;
 			display: block;
 			vertical-align: top;
 			background: url(../img/weDoBG.png) repeat scroll 0 0 #59bedb;
@@ -620,21 +629,77 @@ body > section:nth-child(5){
 			background: url(../img/weDoBG.png) repeat scroll 0 0,-ms-radial-gradient(center,ellipse cover,#59bedb 0%,#39c 100%);
 			background: url(../img/weDoBG.png) repeat scroll 0 0,radial-gradient(ellipse at center,#59bedb 0%,#39c 100%);
 		}
+
+		#slides{
+			background-image: url("../img/slide-bg-complexity.jpg");
+			background-size: cover;
+			background-position: bottom;
+			background-repeat: no-repeat;
+			padding-bottom: 1em;
+		}
+
+		#slides button{
+			margin-left: 1em;
+		}
+		body > section:nth-child(2) ul > li{
+			padding: 1em;
+		}
+		body > section:nth-child(2) ul > li:nth-child(1){
+			background-color: rgba(255, 51, 153, 1); /* pink */
+		}
+		body > section:nth-child(2) ul > li:nth-child(2){
+			background-color: rgba(90, 190, 40, 1); /* green */
+		}
+		body > section:nth-child(2) ul > li:nth-child(3){
+			background-color: rgba(255, 102, 0, 1); /* orange */
+		}
 		body > section:nth-child(2){
+			background-image: none;
 			padding-top: 0;
 			margin-top: 0;
+		}
+		body > section article{
+			max-width: 100%;
 		}
 		body > section:nth-child(2) article{
 			padding-top: 0;
 			margin-top: 0;
+			padding-bottom: 0;
+			margin-bottom: 0;
 		}
+		.item-arrow {
+			display: inline;
+			position: absolute;
+			right: 1em;
+			top: 45%;
+		}
+
+		body > section:nth-child(3){
+			box-shadow: none;
+		}
+
+		body > section:nth-child(3) ol{
+			padding: 0;
+			margin: 0 0 1em 0;
+		}
+
 		header{
 			margin-bottom: 0;
+		}
+		body > section:nth-child(2) ul{
+			margin-bottom: 0;
+			margin-top: 0.3em;
 		}
 		body > section:nth-child(2) ul > li, body > section:nth-child(4) ul > li{
 			border-radius: 0;
 			margin-bottom: 0.3em;
 			min-width: 100%; 
+		}
+		body > section:nth-child(4) ul > li{
+			padding: 1em;
+		}
+		body > section:nth-child(4) ul div{
+			border-radius: 0;
 		}
 
 		section:nth-child(2) ul, section:nth-child(4) ul{
@@ -646,44 +711,98 @@ body > section:nth-child(5){
 		}
 
 		.slideButton{
-			margin-top: 10em;
+			color: #494949;
+			margin-top: 8em;
 			margin-left: 0.5em;
 			min-width: 2em;
 			min-height: 2em;
+			font-size: 1.1em;
 		}
 
 		h2{
 			font-size: 1.2em;
 		}
 
-		footer ul{
-			display: none;
-		}
-
 		.hideL{
 			display: none;
-		}
-		.footerPage:nth-child(5){
-			min-width:100%;
-			background-color: black;
-		}
-		footer .lineOnMobile *{
-			text-align: left;
-			display: block;
-			max-width: 100%;
-			color: white;
-			background-color: black;
 		}
 
 		.successBox{
 			min-width: 100%;
 		}
 
-		
 		body > section:nth-child(3) li{
 			max-width: 30%;
 		}
 		body > section:nth-child(3) li div{
 			max-width: 80%;
+		}
+
+		.imgG{
+			padding: 1em;
+
+		}
+
+		.imgG img{
+			width: auto;
+			margin-left: 
+		}
+
+		.successBox{
+			min-width: 20em;
+			max-width: 20em;
+		}
+
+		.bigSuccess p{
+			min-width: 100%;
+		}
+
+		.bigSuccess img{
+			float: left;
+		}
+
+		footer{
+			display: none;
+		}
+		#mobileFooter{
+			display: block;
+			background-color: red;
+			background-color: #242424;
+		}
+		#mobileFooter ul{
+			margin:0;
+		}
+		#mobileFooter li{
+			display: block;
+			list-style: none;
+			padding: 0.2em;
+			background-color: #242424;
+			color: white;
+			text-transform: uppercase;
+			border: 1px solid rgba(0, 0, 0, 0.2);
+		}
+		#mobileFooter li:hover{
+			background-color: #464646;
+		}
+		#mobileFooter button{
+			border: none;
+			margin-left: 1em;
+			padding: 0.3em;
+			color: white;
+			background-color: #B2B2B2;
+			border-radius: 5px;
+		}
+		#mobileFooter button:hover{
+			background-color: #D1D1D1;
+		}
+		.arrow-down {
+			width: 0; 
+			height: 0; 
+			float: right;
+			margin-left: 2em;
+			margin-top: 0.3em;
+			border-left: 0.5em solid transparent;
+			border-right: 0.5em solid transparent;
+			border-top: 0.7em solid white;
 		}
 	}
