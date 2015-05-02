@@ -25,8 +25,12 @@ a{
 	clear: both;
 }
 
-#menuHamurger, #menuSearch{
+.showOnMobile, #menuHamurger, #menuSearch, #searchInput, .slideButton > span{
 	display: none;
+}
+
+body *{
+	outline: none;
 }
 
 nav > ol > ul {
@@ -62,16 +66,18 @@ ol ul a {
 	width: 100%;
 }
 
-nav > ol > li:hover > ul {
-	display: block;
-}
+@media screen and (min-width: 801px){
+	nav > ol > li:hover > ul {
+		display: block;
+	}
 
-nav > ol > li:hover > a{
-	color: #6FB6D9 ;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	border-bottom: none;
-	box-shadow: -3px 1px 10px -3px gray;
+	nav > ol > li:hover > a{
+		color: #6FB6D9 ;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-bottom: none;
+		box-shadow: -3px 1px 10px -3px gray;
 
+	}
 }
 
 body > section:nth-child(2) h2{
@@ -155,9 +161,8 @@ body > section:nth-child(2) ul > li{
 }
 
 body > section:nth-child(2) ul > li > footer{
-	position: absolute;
-	bottom: 10px;
-	left: 10px;
+	bottom: 10em;
+	left: 1em;
 }
 
 body > section:nth-child(2) ul > li:hover{
@@ -192,8 +197,13 @@ body > section:nth-child(2) ul > li:nth-child(3):hover{
 
 body > section:nth-child(3){
 	text-align: center;
-	background: #3196C9;
-	background: radial-gradient(#6FB6D9, #3196C9); 
+	background: url(../img/weDoBG.png) repeat scroll 0 0 #59bedb;
+	background: url(../img/weDoBG.png) repeat scroll 0 0,-moz-radial-gradient(center,ellipse cover,#59bedb 0%,#39c 100%);
+	background: url(../img/weDoBG.png) repeat scroll 0 0,-webkit-gradient(radial,center center,0px,center center,100%,color-stop(0%,#59bedb),color-stop(100%,#39c));
+	background: url(../img/weDoBG.png) repeat scroll 0 0,-webkit-radial-gradient(center,ellipse cover,#59bedb 0%,#39c 100%);
+	background: url(../img/weDoBG.png) repeat scroll 0 0,-o-radial-gradient(center,ellipse cover,#59bedb 0%,#39c 100%);
+	background: url(../img/weDoBG.png) repeat scroll 0 0,-ms-radial-gradient(center,ellipse cover,#59bedb 0%,#39c 100%);
+	background: url(../img/weDoBG.png) repeat scroll 0 0,radial-gradient(ellipse at center,#59bedb 0%,#39c 100%);
 	box-shadow: inset 1px 7px 30px -10px;
 }
 
@@ -207,7 +217,7 @@ body > section:nth-child(3) li{
 	vertical-align: top;
 	font-size: 15px;
 	color: white;
-	padding: 1% 2% 1% 0;
+	padding: 1% 0 1% 0;
 }
 
 #imageIcon1{
@@ -269,6 +279,7 @@ body > section:nth-child(4) ul > li{
 	border-radius: 5px;
 	text-align: left;
 }
+
 
 body > section:nth-child(4) li > div{
 	display: block;
@@ -458,7 +469,7 @@ body > section:nth-child(5){
 		vertical-align: top ;
 	}
 
-	body > footer .footerPage:nth-child(4){
+	body > footer .footerPage:nth-child(5){
 		background-color: gray;
 		margin-top: 0;
 	}
@@ -476,7 +487,7 @@ body > section:nth-child(5){
 		list-style: none;
 	}
 
-	.footerPage:nth-child(4) h3{
+	.footerPage:nth-child(5) h3{
 		color: rgb(78, 167, 211);
 	}
 
@@ -505,6 +516,7 @@ body > section:nth-child(5){
 		min-height: 10px;
 		display: inline-block;
 		border:0;
+		border-radius: 2px;
 	}
 	.slideButton:hover{
 		background-color: gray;
@@ -514,9 +526,13 @@ body > section:nth-child(5){
 		cursor: pointer;
 	}
 
-	@media screen and (max-width: 768px){
+	@media screen and (max-width: 800px){
 
-		header > nav{
+		.showOnMobile{
+			display: inline;
+		}
+
+		nav{
 			display: none;
 		}
 
@@ -536,6 +552,40 @@ body > section:nth-child(5){
 			cursor: pointer;
 		}
 
+		#menuHamurger:focus ~ nav{
+			display: block;
+			min-width: 100%;
+		}
+
+		nav > ol > li:nth-child(odd){
+			display: block;
+			width: 100%;
+			text-align: left;
+			float: left;
+			background-color: #E6E6E6;
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+			border-bottom: 1px solid rgba(0, 0, 0, 0);
+		}
+
+		nav > ol > li:hover > a{
+			color: #6FB6D9;
+			box-shadow: -10px 10px 10px -10px gray;
+		}
+
+		nav > ol > li:hover{
+			background-color: white;
+			
+		}
+
+		nav > ol > li:nth-child(odd)::before { 
+			content: url("../img/navCollapseArrowRight.png");
+			float: left;
+			margin-right: 0.5em;
+		}
+		nav > ol > li:nth-child(even){
+			display: none;
+		}
+
 		#menuSearch{
 			float: right;
 			display: block;
@@ -545,5 +595,95 @@ body > section:nth-child(5){
 			width: 3em;
 			height: 3em;
 			cursor: pointer;
+		}
+
+		#menuSearch:focus + #searchInput{
+			display: block;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			min-width: 100%;
+			min-height: 2.5em;
+			margin-top: 1em;
+		}
+		article{
+			max-width: 100%; 
+		}
+
+		#freeComverse{
+			display: block;
+			vertical-align: top;
+			background: url(../img/weDoBG.png) repeat scroll 0 0 #59bedb;
+			background: url(../img/weDoBG.png) repeat scroll 0 0,-moz-radial-gradient(center,ellipse cover,#59bedb 0%,#39c 100%);
+			background: url(../img/weDoBG.png) repeat scroll 0 0,-webkit-gradient(radial,center center,0px,center center,100%,color-stop(0%,#59bedb),color-stop(100%,#39c));
+			background: url(../img/weDoBG.png) repeat scroll 0 0,-webkit-radial-gradient(center,ellipse cover,#59bedb 0%,#39c 100%);
+			background: url(../img/weDoBG.png) repeat scroll 0 0,-o-radial-gradient(center,ellipse cover,#59bedb 0%,#39c 100%);
+			background: url(../img/weDoBG.png) repeat scroll 0 0,-ms-radial-gradient(center,ellipse cover,#59bedb 0%,#39c 100%);
+			background: url(../img/weDoBG.png) repeat scroll 0 0,radial-gradient(ellipse at center,#59bedb 0%,#39c 100%);
+		}
+		body > section:nth-child(2){
+			padding-top: 0;
+			margin-top: 0;
+		}
+		body > section:nth-child(2) article{
+			padding-top: 0;
+			margin-top: 0;
+		}
+		header{
+			margin-bottom: 0;
+		}
+		body > section:nth-child(2) ul > li, body > section:nth-child(4) ul > li{
+			border-radius: 0;
+			margin-bottom: 0.3em;
+			min-width: 100%; 
+		}
+
+		section:nth-child(2) ul, section:nth-child(4) ul{
+			padding-left: 0; 
+		}
+
+		.slideButton > span{
+			display: inline;
+		}
+
+		.slideButton{
+			margin-top: 10em;
+			margin-left: 0.5em;
+			min-width: 2em;
+			min-height: 2em;
+		}
+
+		h2{
+			font-size: 1.2em;
+		}
+
+		footer ul{
+			display: none;
+		}
+
+		.hideL{
+			display: none;
+		}
+		.footerPage:nth-child(5){
+			min-width:100%;
+			background-color: black;
+		}
+		footer .lineOnMobile *{
+			text-align: left;
+			display: block;
+			max-width: 100%;
+			color: white;
+			background-color: black;
+		}
+
+		.successBox{
+			min-width: 100%;
+		}
+
+		
+		body > section:nth-child(3) li{
+			max-width: 30%;
+		}
+		body > section:nth-child(3) li div{
+			max-width: 80%;
 		}
 	}
