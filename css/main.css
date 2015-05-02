@@ -25,6 +25,10 @@ a{
 	clear: both;
 }
 
+#menuHamurger, #menuSearch{
+	display: none;
+}
+
 nav > ol > ul {
 	display: inline-block;
 	margin: 0;
@@ -487,16 +491,54 @@ body > section:nth-child(5){
 		padding-right: 10px;
 	}
 
-.slideButton{
-	min-width: 5px;
-	min-height: 10px;
-	display: inline-block;
-	border:0;
-}
-.slideButton:hover{
-	background-color: gray;
-}
-.slideButton:focus{
-	background-color: #74B3CB;
-	cursor: pointer;
-}
+	.slideButton{
+		min-width: 5px;
+		min-height: 10px;
+		display: inline-block;
+		border:0;
+	}
+	.slideButton:hover{
+		background-color: gray;
+	}
+	.slideButton:focus{
+		background-color: #74B3CB;
+		cursor: pointer;
+	}
+
+	@media screen and (max-width: 768px){
+		header{
+			padding: 0.5em; 
+		}
+		header > nav{
+			display: none;
+			text-align: center;
+		}
+
+		header > a > img{
+			display: inline-block;
+			margin-left: 10em; 
+			max-width: 5em;
+		}
+
+		#menuHamurger{
+			float: left;
+			display: block;
+			background: linear-gradient(#EEEEEE, #E6E6E6);
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			width: 3em;
+			height: 3em;
+			cursor: pointer;
+		}
+
+		#menuSearch{
+			float: right;
+			display: block;
+			background: linear-gradient(#EEEEEE, #E6E6E6);
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			width: 3em;
+			height: 3em;
+			cursor: pointer;
+		}
+	}
