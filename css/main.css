@@ -95,9 +95,18 @@ header{
 	margin: none;
 	box-shadow: 1px 7px 30px -10px;
 	z-index: -1;
+	padding: 0.5em; 
+	text-align: center;
+	
+}
+
+header > a > img{
+	display: inline-block;
 }
 
 nav{
+	vertical-align: text-bottom;
+	display: inline-block;
 	margin:auto;
 	max-width: 70%;
 	padding: 10px
@@ -506,17 +515,13 @@ body > section:nth-child(5){
 	}
 
 	@media screen and (max-width: 768px){
-		header{
-			padding: 0.5em; 
-		}
+
 		header > nav{
 			display: none;
-			text-align: center;
 		}
 
 		header > a > img{
 			display: inline-block;
-			margin-left: 10em; 
 			max-width: 5em;
 		}
 
