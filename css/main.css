@@ -160,7 +160,7 @@ body > section:nth-child(2) ul > li{
 .lightBotton{
 	display: block;
 	color: white;
-	font-size: 15px;
+	font-size: 0.7em;
 	padding-top: 3%;
 }
 
@@ -173,7 +173,11 @@ body > section:nth-child(2) ul > li > footer{
 	bottom: 10em;
 	left: 1em;
 }
-
+body > section:nth-child(2) ul > li{
+	min-height: 8em;
+	max-height: 8em;
+	font-size: 1em;
+}
 body > section:nth-child(2) ul > li:hover{
 	cursor: pointer;
 }
@@ -218,7 +222,7 @@ body > section:nth-child(3) li{
 	display: inline-block;
 	width: auto;
 	vertical-align: top;
-	font-size: 15px;
+	font-size: 0.7em;
 	color: white;
 	padding: 1% 0 1% 0;
 }
@@ -477,8 +481,9 @@ body > section:nth-child(5){
 		vertical-align: top ;
 	}
 
-	body > footer .footerPage:nth-child(5){
+	body > footer .footerPage:nth-child(4){
 		background-color: gray;
+		margin-top: 0;
 	}
 
 
@@ -499,11 +504,11 @@ body > section:nth-child(5){
 	}
 
 	#num18{
-		font-size: 60px;
+		font-size: 4em;
 	}
 
 	#july{
-		font-size: 35px;
+		font-size: 3em;
 	}
 
 	nav > ol > li > a {
@@ -515,15 +520,14 @@ body > section:nth-child(5){
 
 	li{
 		display: inline;
-		padding-right: 10px;
 	}
 
 	.slideButton{
-		min-width: 5px;
-		min-height: 10px;
+		min-width: 1em;
+		min-height: 1em;
 		display: inline-block;
 		border:0;
-		border-radius: 2px;
+		border-radius: 0.3em;
 	}
 	.slideButton:hover{
 		background-color: #74B3CB;
@@ -573,7 +577,14 @@ body > section:nth-child(5){
 			border-top: 1px solid rgba(0, 0, 0, 0.1);
 			border-bottom: 1px solid rgba(0, 0, 0, 0);
 		}
-
+		nav{
+			padding: 0;
+		}
+		nav > ol{
+			padding-left: 0;
+			margin-right: 0;
+			margin-left: 0;
+		}
 		nav > ol > li:hover > a{
 			color: #6FB6D9;
 			box-shadow: -10px 10px 10px -10px gray;
@@ -771,6 +782,7 @@ body > section:nth-child(5){
 		}
 		#mobileFooter ul{
 			margin:0;
+			padding-left: 0;
 		}
 		#mobileFooter li{
 			display: block;
